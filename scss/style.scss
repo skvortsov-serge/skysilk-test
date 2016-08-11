@@ -1,5 +1,7 @@
 @import 'bootstrap';
-@import 'media';
+@import '_media';
+@import 'mixins';
+
 
 $arrow-bg: #2481bc;
 $arrow-top: 50%;
@@ -103,7 +105,7 @@ a:hover {
 }
 
 #navbar {
-	width: 64%;
+	width: 63%;
 }
 
 .navbar {
@@ -142,6 +144,7 @@ a:hover {
 
 .navbar-nav {
 	margin: 10px 0 0 37px;
+	@include clearFix;
 }
 
 .nav li a:hover {
@@ -154,7 +157,7 @@ a:hover {
 }
 
 .support-menu {
-	min-width: 149px !important;
+	min-width: 148px !important;
 }
 
 .dropdown-menu {
@@ -166,10 +169,9 @@ a:hover {
 }
 
 .social {
-	min-width: 180px;
+	min-width: 191px;
 	float: right;
 	padding-top: 18px;
-	
 }
 
 .soc-icon {
@@ -634,46 +636,18 @@ footer {
 }
 
 .sign-in {
-	
+	float: left;
 }
 
 .register {
 	margin-left: 10px;
+	float: right;
 }
 
 .modal-window {
-	z-index: 100;	
+	z-index: 100;
 }
 
-.modal-content {
-
-}
-
-/*body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-	border: red 2px solid;
-}
-
-body input:required:valid,
-body textarea:required:valid {
-	border: green 2px solid;
-}*/
-.error {
-        background: #f60000;
-        border: 3px solid #d50000;
-}
-.correct {
-        background: #56d800;
-        border: 3px solid #008000;
-}
-.wrong {
-        font-weight: bold;
-        color: #e90000;
-}
-.normal {
-        font-weight: normal;
-        color: #222;
-}
 
 .info {
         text-align: left;
@@ -700,5 +674,7 @@ body textarea:required:valid {
 	border: 2px green solid;
 	margin-top: 10px;
 }
+
+
 
 

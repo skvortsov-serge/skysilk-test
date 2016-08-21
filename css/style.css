@@ -8885,6 +8885,11 @@ button:hover {
   /*width: 100px;*/
 }
 
+.sky-box {
+  transform: translate(-152%, 100px);
+  transition: all 0.3s ease-in-out;
+}
+
 .text {
   /*float: right;*/
   /*width: 633.66px;*/

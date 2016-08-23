@@ -7961,7 +7961,7 @@ button.close {
     font-size: 16px;
   }
   #navbar {
-    width: 58%;
+    width: 57%;
   }
   .nav-justified li {
     display: table-cell;
@@ -8006,7 +8006,7 @@ button.close {
     position: relative;
   }
   .navbar-nav {
-    padding-left: 22px;
+    padding-left: 17px;
   }
   .navbar-header {
     max-width: 755px;
@@ -8117,7 +8117,7 @@ button.close {
     width: 10px;
   }
   .carousel-indicators {
-    bottom: -40px;
+    bottom: -100px;
   }
   #logo p {
     text-align: left;
@@ -8629,7 +8629,7 @@ a:hover {
 }
 
 .nav-justified {
-  width: 104%;
+  width: 105%;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -8639,7 +8639,7 @@ a:hover {
 }
 
 .navbar-nav {
-  margin: 10px 0 0 37px;
+  margin: 10px 0 0 33px;
 }
 
 .navbar-nav:after {
@@ -8670,7 +8670,7 @@ a:hover {
 }
 
 .social {
-  min-width: 191px;
+  min-width: 195px;
   float: right;
   padding-top: 18px;
 }
@@ -8692,6 +8692,7 @@ a:hover {
   background-size: cover;
   height: 768px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .container1 {
@@ -9173,4 +9174,76 @@ footer {
 .valid {
   border: 2px green solid;
   margin-top: 10px;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityOpposite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cloud-anim-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(350px);
+  }
+}
+
+@keyframes cloud-anim-right0 {
+  0% {
+    opacity: 0;
+    transform: translateX(-350px);
+  }
+  70% {
+    transform: translateX(8%) skewY(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes cloud-anim-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-350px);
+  }
+}
+
+@keyframes cloud-anim-left0 {
+  0% {
+    opacity: 0;
+    transform: translateX(350px);
+  }
+  70% {
+    transform: translateX(-8%) skewY(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

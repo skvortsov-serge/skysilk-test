@@ -36,44 +36,81 @@ $(document).ready(function() {
 
     $('.carousel-indicators li').click(function() {
 
+        var currentCloud = $('.active-cloud');
+
         if ($(this).is($('.first-indicator'))) {
             $('.first-indicator').addClass('active');
             $('.second-indicator').removeClass('active');
             $('.third-indicator').removeClass('active');
-            $('.first-cloud').animate({opacity: 1}, 460).addClass('active-cloud');
-            $('.second-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
-            $('.third-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
+
+            currentCloud.css({ 'animation': 'cloud-anim-right 0.45s ease-in-out forwards' });
+            setTimeout(function() {
+                currentCloud.removeClass('active-cloud');
+            }, 450);
+
+            setTimeout(function() {
+                $('.first-cloud').css({ 'animation': 'cloud-anim-right0 0.45s ease-in-out forwards' });
+            }, 452);
+
+            setTimeout(function() {
+                $('.first-cloud').addClass('active-cloud');
+
+            }, 451);
 
         }
+
         if ($(this).is($('.second-indicator'))) {
             $('.first-indicator').removeClass('active');
             $('.second-indicator').addClass('active');
             $('.third-indicator').removeClass('active');
-            $('.first-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
-            $('.second-cloud').animate({opacity: 1}, 460).addClass('active-cloud');
-            $('.third-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
+
+           currentCloud.css({ 'animation':'opacity 0.45s ease-in-out forwards'});
+            setTimeout(function() {
+                currentCloud.removeClass('active-cloud');
+            }, 450);
+
+            setTimeout(function() {
+                $('.second-cloud').css({ 'animation':'opacityOpposite 0.45s ease-in-out forwards'});
+            }, 452);
+
+            setTimeout(function() {
+                $('.second-cloud').addClass('active-cloud');
+
+            }, 451);
         }
         if ($(this).is($('.third-indicator'))) {
             $('.first-indicator').removeClass('active');
             $('.second-indicator').removeClass('active');
             $('.third-indicator').addClass('active');
-             $('.first-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
-            $('.second-cloud').animate({opacity: 0}, 460).removeClass('active-cloud');
-            $('.third-cloud').animate({opacity: 1}, 460).addClass('active-cloud');
+
+            currentCloud.css({ 'animation': 'cloud-anim-left 0.45s ease-in-out forwards' });
+            setTimeout(function() {
+                currentCloud.removeClass('active-cloud');
+            }, 450);
+
+            setTimeout(function() {
+                $('.third-cloud').css({ 'animation': 'cloud-anim-left0 0.45s ease-in-out forwards' });
+            }, 452);
+
+            setTimeout(function() {
+                $('.third-cloud').addClass('active-cloud');
+
+            }, 451);
         }
     });
 
-    // $('body').click(function() {
-    // 	$('.active-cloud').animate({
-    // 		opacity: 0
-    // 	}, 200);
-    // 	setTimeout(function() {
-    // 		$('.active-cloud').animate({
-    // 		opacity: 1
-    // 	}, 200);
+    $('body').click(function() {
+        // $('.active-cloud').css({'animation':'cloud-anim-left 4.5s ease-in-out forwards'});
+        // $('.active-cloud').animate({
+        // 	opacity: 0
+        // }, 200);
+        // setTimeout(function() {
+        // 	$('.active-cloud').animate({
+        // 	opacity: 1
+        // }, 200);
 
-    // 	}, 450);
-    // });
+        // }, 450);
+    });
 
     $('.arrow-left').click(function(event) {
         event.preventDefault();
@@ -87,19 +124,20 @@ $(document).ready(function() {
             prevDot = $('.carousel-indicators li').last();
         }
 
-
-        currentCloud.animate({
-            opacity: 0
-        }, 450);
+        currentCloud.css({ 'animation': 'cloud-anim-right 0.45s ease-in-out forwards' });
+        // currentCloud.animate({
+        //     opacity: 0,
+        // }, 450);
         setTimeout(function() {
             currentCloud.removeClass('active-cloud');
         }, 450);
 
         setTimeout(function() {
-            prevCloud.animate({
-                opacity: 1
-            }, 450);
-        }, 460);
+            prevCloud.css({ 'animation': 'cloud-anim-right0 0.45s ease-in-out forwards' });
+            // prevCloud.animate({
+            //     opacity: 1,
+            // }, 450);
+        }, 451);
 
         setTimeout(function() {
             prevCloud.addClass('active-cloud');
@@ -122,18 +160,20 @@ $(document).ready(function() {
             nextDot = $('.carousel-indicators li').first();
         }
 
-        currentCloud.animate({
-            opacity: 0
-        }, 450);
+        currentCloud.css({ 'animation': 'cloud-anim-left 0.45s ease-in-out forwards' });
+        // currentCloud.animate({
+        //     opacity: 0
+        // }, 450);
         setTimeout(function() {
             currentCloud.removeClass('active-cloud');
         }, 450);
 
         setTimeout(function() {
-            nextCloud.animate({
-                opacity: 1
-            }, 450);
-        }, 460);
+            nextCloud.css({ 'animation': 'cloud-anim-left0 0.45s ease-in-out forwards' });
+            // nextCloud.animate({
+            //     opacity: 1
+            // }, 450);
+        }, 451);
 
         setTimeout(function() {
             nextCloud.addClass('active-cloud');

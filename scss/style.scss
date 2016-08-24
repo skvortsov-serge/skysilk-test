@@ -123,7 +123,7 @@ a:hover {
 
 #navbar ul li ul li {
 	display: table-row;
-	font-size: 14px;
+	font-size: 14px !important;
 	font-weight: 700px;
 }
 
@@ -157,7 +157,7 @@ a:hover {
 }
 
 .support-menu {
-	min-width: 148px !important;
+	min-width: 148px;
 }
 
 .dropdown-menu {
@@ -176,6 +176,10 @@ a:hover {
 	min-width: 195px;
 	float: right;
 	padding-top: 18px;
+}
+
+.soc-icon-block {
+	margin-left: 18px;
 }
 
 .soc-icon {

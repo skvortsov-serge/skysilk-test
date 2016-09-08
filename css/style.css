@@ -8099,6 +8099,7 @@ button.close {
   .first-cloud .cloud-text {
     width: 70%;
     margin: 52px auto;
+    transform: translateY(-20%);
   }
   .first-cloud .cloud-text h1,
   .second-cloud .cloud-text h1 {
@@ -8497,6 +8498,15 @@ button.close {
     position: absolute;
     left: 0;
   }
+  .btn {
+    font-size: 14px !important;
+  }
+  .register {
+    margin-left: 0 !important;
+  }
+  .sign-in {
+    margin-left: 20px !important;
+  }
 }
 
 /*==========  Mobile First Method  ==========*/
@@ -8711,6 +8721,7 @@ a:hover {
   width: 998px;
   height: 479px;
   display: none;
+  perspective: 1000px;
 }
 
 #cloud {
@@ -8748,7 +8759,8 @@ a:hover {
   top: 90px;
 }
 
-.cloud-text h1, p {
+.cloud-text h1,
+p {
   color: #3a9bd9;
 }
 
@@ -8928,7 +8940,7 @@ button:hover {
   width: 500px;
   /*height: 200px;*/
   position: relative;
-  margin: 0 	auto;
+  margin: 0 auto;
 }
 
 .blue-text h1 {
@@ -9010,7 +9022,8 @@ footer {
   padding-left: 0;
 }
 
-.right a:hover, .left a:hover {
+.right a:hover,
+.left a:hover {
   color: #fff;
   text-decoration: underline;
 }
@@ -9026,7 +9039,8 @@ footer {
   color: #fff;
 }
 
-#left-block, #right-block a:hover {
+#left-block,
+#right-block a:hover {
   text-decoration: underline;
   color: #fff;
 }
@@ -9135,7 +9149,8 @@ footer {
   height: 20px;
 }
 
-.sign-in, .register {
+.sign-in,
+.register {
   margin-bottom: 10px;
 }
 
@@ -9204,49 +9219,51 @@ footer {
 @keyframes cloud-anim-right {
   0% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: scale(1);
+  }
+  20% {
+    transform: translateY(-20px) scale(1.1);
   }
   100% {
     opacity: 0;
-    transform: translateX(350px);
+    transform: translateY(200px) scale(1);
   }
 }
 
 @keyframes cloud-anim-right0 {
   0% {
     opacity: 0;
-    transform: translateX(-350px);
+    transform: translateY(-200px);
   }
-  70% {
-    transform: translateX(8%) skewY(1deg);
+  50% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-30px);
+  }
+  90% {
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
 
 @keyframes cloud-anim-left {
   0% {
-    opacity: 1;
-    transform: translateX(0px);
+    transform: rotateX(0deg) translateY(0px);
   }
   100% {
-    opacity: 0;
-    transform: translateX(-350px);
+    transform: rotateY(90deg) translateY(30px);
   }
 }
 
 @keyframes cloud-anim-left0 {
   0% {
-    opacity: 0;
-    transform: translateX(350px);
-  }
-  70% {
-    transform: translateX(-8%) skewY(-1deg);
+    transform: rotateY(-90deg) translateY(30px);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0px);
+    transform: rotateX(0deg) translateY(0px);
   }
 }

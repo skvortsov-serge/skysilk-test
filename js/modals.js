@@ -89,7 +89,7 @@ $(document).ready(function() {
             var confirmInput = $('#confirm-password');
             var passwordVal = passwordInput.val();
             var confirmVal = confirmInput.val();
-             if (confirmVal == '') {
+            if (confirmVal == '') {
                 $('.confirm-parent').addClass('has-error');
                 if ($('.confirm .invalid').length == 0) {
                     $('.confirm').append('<div class="invalid">Please, type here your password</div>');

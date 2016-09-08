@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(window).on('resize', onResize);
 
     function onResize() {
-        if ($(window).width() > 768) {
+        if (window.innerWidth > 767) {
             $('.navbar').css("position", "fixed");
             $(window).on('scroll', onScroll);
         } else {
@@ -99,18 +99,18 @@ $(document).ready(function() {
         }
     });
 
-    $('body').click(function() {
-        // $('.active-cloud').css({'animation':'cloud-anim-left 4.5s ease-in-out forwards'});
-        // $('.active-cloud').animate({
-        // 	opacity: 0
-        // }, 200);
-        // setTimeout(function() {
-        // 	$('.active-cloud').animate({
-        // 	opacity: 1
-        // }, 200);
+    // $('body').click(function() {
+    //     // $('.active-cloud').css({'animation':'cloud-anim-left 4.5s ease-in-out forwards'});
+    //     // $('.active-cloud').animate({
+    //     // 	opacity: 0
+    //     // }, 200);
+    //     // setTimeout(function() {
+    //     // 	$('.active-cloud').animate({
+    //     // 	opacity: 1
+    //     // }, 200);
 
-        // }, 450);
-    });
+    //     // }, 450);
+    // });
 
     $('.arrow-left').click(function(event) {
         event.preventDefault();
@@ -160,7 +160,8 @@ $(document).ready(function() {
             nextDot = $('.carousel-indicators li').first();
         }
 
-        currentCloud.css({ 'animation': 'cloud-anim-left 0.45s ease-in-out forwards' });
+        currentCloud.css({ 'animation': 'cloud-anim-left 0.45s ease-in-out forwards',
+        					'transform-origin': 'bottom right' });
         // currentCloud.animate({
         //     opacity: 0
         // }, 450);
@@ -169,7 +170,8 @@ $(document).ready(function() {
         }, 450);
 
         setTimeout(function() {
-            nextCloud.css({ 'animation': 'cloud-anim-left0 0.45s ease-in-out forwards' });
+            nextCloud.css({ 'animation': 'cloud-anim-left0 0.45s ease-in-out forwards',
+        					'transform-origin': 'left center' });
             // nextCloud.animate({
             //     opacity: 1
             // }, 450);

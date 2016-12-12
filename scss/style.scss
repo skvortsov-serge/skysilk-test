@@ -15,7 +15,6 @@ $arrow-top: 50%;
     float: right;
 }
 
-
 body {
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -165,14 +164,13 @@ a:hover {
 }
 
 .social {
-    min-width: 195px;
+    min-width: 194px;
     float: right;
     padding-top: 18px;
+    margin-right: -10px;
 }
 
-.soc-icon-block {
-    margin-left: 18px;
-}
+.soc-icon-block {}
 
 .soc-icon {
     width: 25%;
@@ -496,8 +494,11 @@ footer {
     padding: 1rem 0;
 }
 
-#left-block {
-    width: 350px;
+// #left-block {
+//     width: 350px;
+// }
+.row-no-padding {
+    margin-right: 0;
 }
 
 #left-block ul {
@@ -571,7 +572,7 @@ footer {
 }
 
 #footer-content {
-    margin: 3rem 40px;
+    // margin: 3rem 40px;
     height: 198px;
 }
 
@@ -643,9 +644,10 @@ footer {
     height: 20px;
 }
 
-.sign-in,
-.register {
+div.modal-window .sign-in,
+div.modal-window .register {
     margin-bottom: 10px;
+    font-size: 14px !important;
 }
 
 .sign-in {
@@ -729,12 +731,12 @@ footer {
     }
     // 0% 
     // {
-    // 	opacity: 1;
-    // 	transform: translateX(0px);
+    //  opacity: 1;
+    //  transform: translateX(0px);
     // };
     // 100% {
-    // 	opacity: 0;
-    // 	transform: translateX(350px);
+    //  opacity: 0;
+    //  transform: translateX(350px);
     // }
 }
 
@@ -759,15 +761,15 @@ footer {
     }
     // 0% 
     // {
-    // 	opacity: 0;
-    // 	transform: translateX(-350px);
+    //  opacity: 0;
+    //  transform: translateX(-350px);
     // };
     // 70% {
-    // 	transform: translateX(8%) skewY(1deg);
+    //  transform: translateX(8%) skewY(1deg);
     // }
     // 100% {
-    // 	opacity: 1;
-    // 	transform: translateX(0px);
+    //  opacity: 1;
+    //  transform: translateX(0px);
     // }
 }
 
@@ -782,12 +784,12 @@ footer {
     }
     // 0% 
     // {
-    // 	opacity: 1;
-    // 	transform: translateX(0px);
+    //  opacity: 1;
+    //  transform: translateX(0px);
     // };
     // 100% {
-    // 	opacity: 0;
-    // 	transform: translateX(-350px);
+    //  opacity: 0;
+    //  transform: translateX(-350px);
     // }
 }
 
@@ -796,21 +798,20 @@ footer {
     0% {
         transform: rotateY(-90deg) translateY(30px);
     }
-    
     100% {
         transform: rotateX(0deg) translateY(0px);
     }
     // 0% 
     // {
-    // 	opacity: 0;
-    // 	transform: translateX(350px);
+    //  opacity: 0;
+    //  transform: translateX(350px);
     // };
     // 70% {
-    // 	transform: translateX(-8%) skewY(-1deg);
+    //  transform: translateX(-8%) skewY(-1deg);
     // }
     // 100% {
-    // 	opacity: 1;
-    // 	transform: translateX(0px);
+    //  opacity: 1;
+    //  transform: translateX(0px);
     // }
 }
 

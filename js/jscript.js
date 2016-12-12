@@ -6,26 +6,31 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    $(window).on('resize', onResize);
 
     function onResize() {
         if (window.innerWidth > 767) {
             $('.navbar').css("position", "fixed");
-            $(window).on('scroll', onScroll);
         } else {
             $('.navbar').fadeIn(300);
-            $(window).off('scroll', onScroll);
             $('.navbar').css("position", "static");
         }
     };
 
-    function onScroll() {
-        if ($(window).scrollTop() < 200) {
-            $('.navbar').fadeIn(300);
-        } else {
-            $('.navbar').fadeOut(300);
+    $(window).on('resize', onResize);
+
+    var lastScrollTop = 0;
+    $(window).scroll(function() {
+        var bodyPos = document.body.scrollTop;
+
+        if (bodyPos > 210) {
+            if (bodyPos > lastScrollTop) {
+                $('.navbar').fadeOut(300);
+            } else {
+                $('.navbar').fadeIn(300);
+            }
+            lastScrollTop = bodyPos;
         }
-    }
+    });
 
     onResize();
 
@@ -64,13 +69,13 @@ $(document).ready(function() {
             $('.second-indicator').addClass('active');
             $('.third-indicator').removeClass('active');
 
-           currentCloud.css({ 'animation':'opacity 0.45s ease-in-out forwards'});
+            currentCloud.css({ 'animation': 'opacity 0.45s ease-in-out forwards' });
             setTimeout(function() {
                 currentCloud.removeClass('active-cloud');
             }, 450);
 
             setTimeout(function() {
-                $('.second-cloud').css({ 'animation':'opacityOpposite 0.45s ease-in-out forwards'});
+                $('.second-cloud').css({ 'animation': 'opacityOpposite 0.45s ease-in-out forwards' });
             }, 452);
 
             setTimeout(function() {
@@ -102,11 +107,11 @@ $(document).ready(function() {
     // $('body').click(function() {
     //     // $('.active-cloud').css({'animation':'cloud-anim-left 4.5s ease-in-out forwards'});
     //     // $('.active-cloud').animate({
-    //     // 	opacity: 0
+    //     //   opacity: 0
     //     // }, 200);
     //     // setTimeout(function() {
-    //     // 	$('.active-cloud').animate({
-    //     // 	opacity: 1
+    //     //   $('.active-cloud').animate({
+    //     //   opacity: 1
     //     // }, 200);
 
     //     // }, 450);
@@ -160,8 +165,10 @@ $(document).ready(function() {
             nextDot = $('.carousel-indicators li').first();
         }
 
-        currentCloud.css({ 'animation': 'cloud-anim-left 0.45s ease-in-out forwards',
-        					'transform-origin': 'bottom right' });
+        currentCloud.css({
+            'animation': 'cloud-anim-left 0.45s ease-in-out forwards',
+            'transform-origin': 'bottom right'
+        });
         // currentCloud.animate({
         //     opacity: 0
         // }, 450);
@@ -170,8 +177,10 @@ $(document).ready(function() {
         }, 450);
 
         setTimeout(function() {
-            nextCloud.css({ 'animation': 'cloud-anim-left0 0.45s ease-in-out forwards',
-        					'transform-origin': 'left center' });
+            nextCloud.css({
+                'animation': 'cloud-anim-left0 0.45s ease-in-out forwards',
+                'transform-origin': 'left center'
+            });
             // nextCloud.animate({
             //     opacity: 1
             // }, 450);
@@ -231,6 +240,8 @@ $(document).ready(function() {
 
             $('.sky-box').css({ 'transform': 'translate(' + offset + 'px, ' + Math.abs(offset * 0.2) + 'px)' });
         }
-    })
+    });
+
+
 
 });

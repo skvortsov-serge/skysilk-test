@@ -416,7 +416,7 @@
         float: none !important;
         text-align: left;
         position: absolute;
-        left: 4%;
+        left: 10%;
     }
     .right-right {
         position: absolute !important;
@@ -564,8 +564,8 @@
     .first-cloud .cloud-text h1 {
         font-size: 18px;
     }
-    #left-block {
-        width: 92%;
+        .register {
+        margin-left: 0 !important;
     }
 }
 
@@ -577,7 +577,7 @@
         float: none;
         text-align: left;
         position: absolute;
-        left: 0;
+        // left: 0;
     }
 
     .btn {
